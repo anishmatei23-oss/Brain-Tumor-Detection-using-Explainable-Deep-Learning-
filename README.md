@@ -32,16 +32,11 @@ A full-stack brain tumor classification project that combines a Flask backend, a
 ## Setup
 
 1. Clone the repository
-2. **Prepare the trained model** (see [MODEL_INFO.md](MODEL_INFO.md)):
-   - Option A: Use Git LFS to download the pre-trained model
-   - Option B: Train your own using `ml_training/train_first_model.py`
-   - Place model in `ml_training/models/brain_tumor_cnn.h5`
-
-3. Create a virtual environment:
+2. Create a virtual environment:
    ```bash
    python -m venv .venv
    ```
-4. Activate it:
+3. Activate it:
    - Windows PowerShell:
      ```powershell
      .\.venv\Scripts\Activate.ps1
@@ -50,15 +45,15 @@ A full-stack brain tumor classification project that combines a Flask backend, a
      ```cmd
      .\.venv\Scripts\activate.bat
      ```
-5. Install dependencies:
+4. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-6. Start the backend:
+5. Start the backend:
    ```bash
    python backend/app.py
    ```
-7. Open the browser to:
+6. Open the browser to:
    ```text
    http://localhost:5000
    ```
