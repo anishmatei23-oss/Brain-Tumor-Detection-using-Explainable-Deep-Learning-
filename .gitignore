@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+*.pth
+*.pt
+
+# Virtual environments
+.venv/
+venv/
+env/
+tf_env/
+ENV/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.kilo/
+*.swp
+*.swo
+
+# Runtime artifacts
+uploads/
+static/heatmaps/
+*.log
+*.egg-info/
+
+# Training data (large, only needed for training)
+dataset/
+ml_training/dataset/
+ml_training/training_logs/
+ml_training/*.py
+ml_training/train_models.ipynb
+ml_training/tempCodeRunnerFile.py
+ml_training/trained_models/
+
+# Keep only the trained models needed for production
+!ml_training/models/brain_tumor_cnn.h5
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Jupyter
+.ipynb_checkpoints/
+.jupyter/
+
+# IDEs
+*.sublime-workspace
+*.sublime-project
+
+# Misc
+.DS_Store
+Thumbs.db
+*.egg-info
