@@ -15,7 +15,7 @@ A full-stack brain tumor classification project that combines a Flask backend, a
 
 - `backend/` – Flask API and model logic
 - `frontend/` – HTML, CSS, and JavaScript UI
-- `ml_training/` – training scripts and saved model files
+- `brain_tumor_training.py` – downloads the dataset and trains the classifier
 - `uploads/` – uploaded MRI files
 - `static/heatmaps/` – generated heatmap outputs
 
@@ -49,22 +49,28 @@ A full-stack brain tumor classification project that combines a Flask backend, a
    ```bash
    pip install -r requirements.txt
    ```
-5. Start the backend:
+5. Train a model. The public Kaggle dataset is downloaded to KaggleHub's local cache:
+   ```bash
+   python brain_tumor_training.py
+   ```
+   Configure Kaggle authentication as required by KaggleHub before running this command.
+6. Start the backend:
    ```bash
    python backend/app.py
    ```
-6. Open the browser to:
+7. Open the browser to:
    ```text
    http://localhost:5000
    ```
 
 ## Model Notes
 
-The project includes a trained model at:
+The trained model is generated locally at `backend/models/brain_tumor_cnn.keras`.
+Model files are ignored by Git because GitHub rejects files larger than 100 MB.
 
-- `ml_training/models/brain_tumor_cnn.h5`
-
-If the model is missing or replaced, update the loading paths in [backend/model_loader.py](backend/model_loader.py).
+The trainer uses `masoudnickparvar/brain-tumor-mri-dataset`, ignores its
+`notumor` class to match the backend's three-class model, and creates the
+validation split without copying images into the repository.
 
 ## API Endpoints
 

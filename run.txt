@@ -1,20 +1,24 @@
-HOW TO RUN THE PROJECT MANUALLY
-================================
+HOW TO RUN THE PROJECT
+======================
 
-1. ACTIVATE VIRTUAL ENVIRONMENT
+1. CREATE AND ACTIVATE A VIRTUAL ENVIRONMENT
    PowerShell:
-   .\tf_env\Scripts\Activate.ps1
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
 
    CMD:
-   .\tf_env\Scripts\activate.bat
+   .\.venv\Scripts\activate.bat
 
 2. INSTALL DEPENDENCIES (if not already installed)
    pip install -r requirements.txt
 
-3. START THE BACKEND
+3. TRAIN THE MODEL (first run, or when retraining)
+   python brain_tumor_training.py
+
+4. START THE BACKEND
    python backend/app.py
 
-4. OPEN IN BROWSER
+5. OPEN IN BROWSER
    http://localhost:5000
 
 The Flask application will:
@@ -22,7 +26,7 @@ The Flask application will:
 - Accept MRI image uploads at /api/upload
 - Perform tumor classification at /api/analyze
 - Generate explainable AI heatmaps
-- Use the trained model from ml_training/models/brain_tumor_cnn.h5
+- Use the trained model from backend/models/brain_tumor_cnn.keras
 
 API ENDPOINTS AVAILABLE
 - GET /api/health              - Health check

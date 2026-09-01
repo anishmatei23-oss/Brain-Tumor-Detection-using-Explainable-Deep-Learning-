@@ -4,3 +4,4 @@ tensorflow-cpu==2.21.0
 pillow==12.3.0
 opencv-python-headless==5.0.0.93
 pydicom==3.0.2
+kagglehub==0.3.12

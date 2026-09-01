@@ -17,11 +17,7 @@ class BrainTumorModel:
         try:
             base_dir = Path(__file__).resolve().parent.parent
             possible_paths = [
-                base_dir / 'ml_training' / 'models' / 'brain_tumor_cnn.h5',
-                base_dir / 'ml_training' / 'models' / 'best_model.h5',
-                base_dir / 'backend' / 'models' / 'brain_tumor_cnn.h5',
-                Path('models/brain_tumor_cnn.h5'),
-                Path('../ml_training/models/brain_tumor_cnn.h5'),
+                base_dir / 'backend' / 'models' / 'brain_tumor_cnn.keras',
             ]
 
             for model_path in possible_paths:

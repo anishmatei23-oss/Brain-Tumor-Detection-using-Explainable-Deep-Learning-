@@ -4,6 +4,9 @@ __pycache__/
 *.pyo
 *.pyd
 *.pyc
+*.h5
+*.keras
+*.tflite
 *.so
 
 # Virtual environments
@@ -22,6 +25,9 @@ Thumbs.db
 uploads/
 static/heatmaps/
 *.log
+training_logs/
+dataset/
+ml_training/dataset/
 
 # Local env files
 .env
